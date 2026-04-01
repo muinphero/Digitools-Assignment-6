@@ -6,6 +6,8 @@ import StatsSection from "./components/StatsSection";
 import ProductSection from "./components/ProductSection";
 import CartSection from "./components/CartSection";
 import ToggleButtons from "./components/ToggleButtons";
+import StepsSection from "./components/StepsSection";
+import PricingSection from "./components/PricingSection";
 import Footer from "./components/Footer";
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
   const handleAddToCart = (product) => {
     const cartItem = {
       ...product,
-      cartItemId: `${product.id}-${Date.now()}-${Math.random()}`,
+      cartItemId: `${product.id}-${Date.now()}-${Math.random()}`
     };
     setCart((prev) => [...prev, cartItem]);
     toast.success(`${product.name} added to cart`);
@@ -54,6 +56,8 @@ function App() {
         )}
       </main>
 
+      <StepsSection />
+      <PricingSection />
       <Footer />
 
       <ToastContainer position="top-right" autoClose={1500} />

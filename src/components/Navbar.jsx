@@ -1,3 +1,5 @@
+﻿import { FaShoppingCart } from "react-icons/fa";
+
 function Navbar({ cartCount }) {
   return (
     <header className="bg-white border-b border-slate-200">
@@ -12,9 +14,10 @@ function Navbar({ cartCount }) {
         </nav>
 
         <div className="flex items-center gap-4">
-          <span className="text-sm font-semibold text-slate-700">
-            Cart ({cartCount})
-          </span>
+          <div className="flex items-center gap-1 text-sm font-semibold text-slate-700">
+            <FaShoppingCart />
+            <span>({cartCount})</span>
+          </div>
           <span className="text-sm font-semibold text-slate-700">Login</span>
           <button className="btn btn-primary rounded-full">Get Started</button>
         </div>

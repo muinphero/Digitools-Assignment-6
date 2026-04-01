@@ -1,4 +1,4 @@
-function Footer() {
+﻿function Footer() {
   return (
     <footer id="footer" className="bg-slate-900 text-white py-12 mt-16">
       <div className="w-[92%] max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -37,9 +37,7 @@ function Footer() {
         </div>
       </div>
 
-      <p className="text-center text-slate-400 mt-8">
-        © 2026 DigiTools. All rights reserved.
-      </p>
+      <p className="text-center text-slate-400 mt-8">Copyright 2026 DigiTools. All rights reserved.</p>
     </footer>
   );
 }
