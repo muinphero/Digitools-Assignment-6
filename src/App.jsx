@@ -1,16 +1,18 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "./assets/vite.svg";
-import heroImg from "./assets/hero.png";
-import "./App.css";
+import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
+import StatsSection from "./components/StatsSection";
+import ProductSection from "./components/ProductSection";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-purple-700">
-        DigiTools Setup Complete
-      </h1>
-    </div>
+    <>
+      <Navbar />
+      <Banner />
+      <StatsSection />
+      <ProductSection />
+      <Footer />
+    </>
   );
 }
 
