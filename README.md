@@ -26,5 +26,6 @@ DigiTools is a responsive React-based digital tools buying website where users c
 
 ## Links
 
-- Live Site:
-- GitHub Repository:
+- Live Site: https://digitools-assignment-6-ph.netlify.app/
+- GitHub Repository: https://github.com/muinphero/Digitools-Assignment-6
+
