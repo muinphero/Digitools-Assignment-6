@@ -1,4 +1,4 @@
-function ToggleButtons({ activeTab, setActiveTab }) {
+﻿function ToggleButtons({ activeTab, setActiveTab, cartCount }) {
   return (
     <div className="flex justify-center mb-8">
       <div className="bg-white border border-slate-200 rounded-full p-1 flex">
@@ -19,7 +19,7 @@ function ToggleButtons({ activeTab, setActiveTab }) {
             activeTab === "cart" ? "bg-purple-600 text-white" : "text-slate-600"
           }`}
         >
-          Cart
+          Cart ({cartCount})
         </button>
       </div>
     </div>

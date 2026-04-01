@@ -1,4 +1,4 @@
-import { useState } from "react";
+﻿import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
@@ -8,6 +8,7 @@ import CartSection from "./components/CartSection";
 import ToggleButtons from "./components/ToggleButtons";
 import StepsSection from "./components/StepsSection";
 import PricingSection from "./components/PricingSection";
+import CTASection from "./components/CTASection";
 import Footer from "./components/Footer";
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
       <StatsSection />
 
       <main className="py-10">
-        <ToggleButtons activeTab={activeTab} setActiveTab={setActiveTab} />
+        <ToggleButtons activeTab={activeTab} setActiveTab={setActiveTab} cartCount={cart.length} />
         {activeTab === "products" ? (
           <ProductSection onAddToCart={handleAddToCart} />
         ) : (
@@ -58,6 +59,7 @@ function App() {
 
       <StepsSection />
       <PricingSection />
+      <CTASection />
       <Footer />
 
       <ToastContainer position="top-right" autoClose={1500} />

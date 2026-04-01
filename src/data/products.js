@@ -1,4 +1,4 @@
-export const products = [
+﻿export const products = [
   {
     id: 1,
     name: "AI Writing Pro",
@@ -11,9 +11,9 @@ export const products = [
     features: [
       "Unlimited AI generations",
       "50+ writing templates",
-      "Grammar checker",
+      "Grammar checker"
     ],
-    icon: "/products/writing_2327400 1.png",
+    icon: "/products/writing_2327400 1.png"
   },
   {
     id: 2,
@@ -25,7 +25,7 @@ export const products = [
     tag: "popular",
     tagType: "Popular",
     features: ["2000+ templates", "Monthly updates", "Commercial license"],
-    icon: "/products/design-tool.png",
+    icon: "/products/design-tool.png"
   },
   {
     id: 3,
@@ -37,7 +37,7 @@ export const products = [
     tag: "new",
     tagType: "New",
     features: ["10M+ assets", "Commercial use", "No attribution"],
-    icon: "/products/portfolio.png",
+    iconType: "camera"
   },
   {
     id: 4,
@@ -49,7 +49,7 @@ export const products = [
     tag: "popular",
     tagType: "Popular",
     features: ["50+ automations", "API access", "Custom workflows"],
-    icon: "/products/operation.png",
+    icon: "/products/operation.png"
   },
   {
     id: 5,
@@ -61,7 +61,7 @@ export const products = [
     tag: "new",
     tagType: "New",
     features: ["100+ templates", "ATS optimization", "Export to PDF"],
-    icon: "/products/shopping-cart.png",
+    icon: "/products/portfolio.png"
   },
   {
     id: 6,
@@ -73,6 +73,6 @@ export const products = [
     tag: "best seller",
     tagType: "Best Seller",
     features: ["5000+ assets", "Scheduler included", "Analytics dashboard"],
-    icon: "/products/social-media.png",
-  },
+    icon: "/products/social-media.png"
+  }
 ];

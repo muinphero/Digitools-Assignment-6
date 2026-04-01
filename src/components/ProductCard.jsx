@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { FaCheckCircle } from "react-icons/fa";
+﻿import { useEffect, useState } from "react";
+import { FaCamera, FaCheckCircle } from "react-icons/fa";
 
 function ProductCard({ product, onAddToCart }) {
   const [isAdded, setIsAdded] = useState(false);
@@ -7,7 +7,7 @@ function ProductCard({ product, onAddToCart }) {
   const tagStyles = {
     "Best Seller": "bg-amber-100 text-amber-700",
     Popular: "bg-indigo-100 text-indigo-700",
-    New: "bg-green-100 text-green-700",
+    New: "bg-green-100 text-green-700"
   };
 
   const handleBuyNow = () => {
@@ -23,8 +23,12 @@ function ProductCard({ product, onAddToCart }) {
 
   return (
     <div className="bg-white border-2 border-slate-200 rounded-2xl p-5 relative">
-      <div className="w-14 h-14 rounded-full bg-violet-100 flex items-center justify-center">
-        <img src={product.icon} alt={product.name} className="w-7 h-7" />
+      <div className="w-14 h-14 rounded-full bg-violet-100 flex items-center justify-center border border-slate-200">
+        {product.iconType === "camera" ? (
+          <FaCamera className="w-7 h-7 text-sky-500" />
+        ) : (
+          <img src={product.icon} alt={product.name} className="w-7 h-7" />
+        )}
       </div>
 
       <span
