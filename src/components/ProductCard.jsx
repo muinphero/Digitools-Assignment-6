@@ -1,11 +1,25 @@
+import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 
 function ProductCard({ product, onAddToCart }) {
+  const [isAdded, setIsAdded] = useState(false);
+
   const tagStyles = {
     "Best Seller": "bg-amber-100 text-amber-700",
     Popular: "bg-indigo-100 text-indigo-700",
     New: "bg-green-100 text-green-700",
   };
+
+  const handleBuyNow = () => {
+    onAddToCart(product);
+    setIsAdded(true);
+  };
+
+  useEffect(() => {
+    if (!isAdded) return;
+    const timer = setTimeout(() => setIsAdded(false), 1200);
+    return () => clearTimeout(timer);
+  }, [isAdded]);
 
   return (
     <div className="bg-white border-2 border-slate-200 rounded-2xl p-5 relative">
@@ -39,10 +53,10 @@ function ProductCard({ product, onAddToCart }) {
       </ul>
 
       <button
-        onClick={() => onAddToCart(product)}
+        onClick={handleBuyNow}
         className="btn btn-primary rounded-full w-full mt-5"
       >
-        Buy Now
+        {isAdded ? "Added to cart" : "Buy Now"}
       </button>
     </div>
   );

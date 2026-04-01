@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 import StatsSection from "./components/StatsSection";
@@ -17,14 +18,21 @@ function App() {
       cartItemId: `${product.id}-${Date.now()}-${Math.random()}`,
     };
     setCart((prev) => [...prev, cartItem]);
+    toast.success(`${product.name} added to cart`);
   };
 
   const handleRemoveFromCart = (cartItemId) => {
     setCart((prev) => prev.filter((item) => item.cartItemId !== cartItemId));
+    toast.info("Item removed from cart");
   };
 
   const handleCheckout = () => {
+    if (cart.length === 0) {
+      toast.warning("Your cart is already empty");
+      return;
+    }
     setCart([]);
+    toast.success("Checkout complete. Cart cleared.");
   };
 
   return (
@@ -47,6 +55,8 @@ function App() {
       </main>
 
       <Footer />
+
+      <ToastContainer position="top-right" autoClose={1500} />
     </>
   );
 }
