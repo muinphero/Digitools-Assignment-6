@@ -1,6 +1,6 @@
 import { FaCheckCircle } from "react-icons/fa";
 
-function ProductCard({ product }) {
+function ProductCard({ product, onAddToCart }) {
   const tagStyles = {
     "Best Seller": "bg-amber-100 text-amber-700",
     Popular: "bg-indigo-100 text-indigo-700",
@@ -38,7 +38,10 @@ function ProductCard({ product }) {
         ))}
       </ul>
 
-      <button className="btn btn-primary rounded-full w-full mt-5">
+      <button
+        onClick={() => onAddToCart(product)}
+        className="btn btn-primary rounded-full w-full mt-5"
+      >
         Buy Now
       </button>
     </div>

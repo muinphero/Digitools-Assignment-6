@@ -1,4 +1,4 @@
-function Navbar() {
+function Navbar({ cartCount }) {
   return (
     <header className="bg-white border-b border-slate-200">
       <div className="w-[92%] max-w-[1200px] mx-auto h-[88px] flex items-center justify-between">
@@ -12,7 +12,9 @@ function Navbar() {
         </nav>
 
         <div className="flex items-center gap-4">
-          <span className="text-sm font-semibold text-slate-700">Cart (0)</span>
+          <span className="text-sm font-semibold text-slate-700">
+            Cart ({cartCount})
+          </span>
           <span className="text-sm font-semibold text-slate-700">Login</span>
           <button className="btn btn-primary rounded-full">Get Started</button>
         </div>

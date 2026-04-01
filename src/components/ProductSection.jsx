@@ -1,7 +1,7 @@
 import { products } from "../data/products";
 import ProductCard from "./ProductCard";
 
-function ProductSection() {
+function ProductSection({ onAddToCart }) {
   return (
     <section id="products" className="py-20">
       <div className="w-[92%] max-w-[1200px] mx-auto">
@@ -15,7 +15,11 @@ function ProductSection() {
 
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
+            <ProductCard
+              key={product.id}
+              product={product}
+              onAddToCart={onAddToCart}
+            />
           ))}
         </div>
       </div>
