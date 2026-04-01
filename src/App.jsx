@@ -12,7 +12,19 @@ function App() {
   const [cart, setCart] = useState([]);
 
   const handleAddToCart = (product) => {
-    setCart((prev) => [...prev, product]);
+    const cartItem = {
+      ...product,
+      cartItemId: `${product.id}-${Date.now()}-${Math.random()}`,
+    };
+    setCart((prev) => [...prev, cartItem]);
+  };
+
+  const handleRemoveFromCart = (cartItemId) => {
+    setCart((prev) => prev.filter((item) => item.cartItemId !== cartItemId));
+  };
+
+  const handleCheckout = () => {
+    setCart([]);
   };
 
   return (
@@ -26,7 +38,11 @@ function App() {
         {activeTab === "products" ? (
           <ProductSection onAddToCart={handleAddToCart} />
         ) : (
-          <CartSection />
+          <CartSection
+            cart={cart}
+            onRemoveFromCart={handleRemoveFromCart}
+            onCheckout={handleCheckout}
+          />
         )}
       </main>
 
